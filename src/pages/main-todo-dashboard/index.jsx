@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/ui/Header';
+import Footer from '../../components/ui/Footer';
 import TodoInput from './components/TodoInput';
 import FilterTabs from './components/FilterTabs';
 import TodoList from './components/TodoList';
@@ -90,10 +91,10 @@ const MainTodoDashboard = () => {
   const filteredTodos = getFilteredTodos();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-indigo-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-indigo-50/30 flex flex-col">
       <Header />
       
-      <main className="pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+      <main className="pt-20 pb-12 px-4 sm:px-6 lg:px-8 flex-grow">
         <div className="max-w-4xl mx-auto">
           {/* Enhanced Page Header */}
           <div className="text-center mb-10">
@@ -220,6 +221,8 @@ const MainTodoDashboard = () => {
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 };
